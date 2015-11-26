@@ -1,0 +1,144 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#casilla,
+#pisos {
+    background-color: #171717;
+    border: 2px solid #3e3e3e;
+    border-radius: 5px;
+    padding: 4px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.39);
+    /*        position: absolute;*/
+    width: 200px;
+}
+
+#casilla ul,
+#pisos ul {
+    font-family: tahoma, Arial, Helvetica, sans-serif;
+    color: #6d6d6d;
+    background: #fff;
+    border: 1px solid #171717;
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("fonts/flaticon.eot");
+    src: url("fonts/flaticon.eot#iefix") format("embedded-opentype"), url("fonts/flaticon.woff") format("woff"), url("fonts/flaticon.ttf") format("truetype"), url("fonts/flaticon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after,
+.discapacitado:after,
+.discapacitado:before,
+.prohivido:before,
+.prohivido:after {
+    font-family: Flaticon;
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 20px;
+}
+
+.flaticon-disability3:after {
+    content: "\e000";
+    color: blue;
+    font-size: 35px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.flaticon-roadsign14:after {
+    content: "\e001";
+    color: red;
+    font-size: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: -45px;
+}
+.flaticon-disability3:after,
+.flaticon-roadsign14:after {
+    transition: .2s;
+}
+
+.flaticon-disability3:hover:after,
+.flaticon-roadsign14:hover:after{
+    transform: rotate(360deg);
+}
+
+#casilla ul li,
+#pisos ul li {
+    line-height: 1.5em;
+    padding: 5px 5px 5px 25px;
+    font-size: 15px;
+    border-bottom: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#casilla ul li:hover,
+#pisos ul li:hover {
+    background-color: #fff8cc;
+    border-bottom: 2px solid #ffe222;
+    color: #000;
+    cursor: pointer;
+}
+
+#casilla a,
+#pisos a {
+    color: #6d6d6d;
+    display: block;
+}
+
+#casilla ul li,
+#pisos ul li {
+    background-position: 5px 6px;
+    background-repeat: no-repeat;
+}
+
+#casilla #multiple_padre {
+    position: relative;
+}
+
+#casilla #multiple_padre div {
+    display: inline;
+    right: 5px;
+    transform: rotate(-90deg);
+    font-size: 1.3em;
+    position: absolute;
+    transition: .2s;
+}
+
+#casilla #multiple_padre:hover div{
+    transform: rotate(0)
+}
+
+#casilla #multiple_hijo {
+        display: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.39);
+    margin: 0px 5px 5px 5px;
+    padding-right: 50px;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    border: 2px solid black;
+}
+
+#multiple_hijo li{
+    position: relative;
+}
+
+
+#multiple_padre:hover #multiple_hijo {
+    display: block;
+}

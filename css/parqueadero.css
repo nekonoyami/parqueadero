@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron:900);
+@font-face {
+    font-family: "Flaticon";
+    src: url("fonts/flaticon.eot");
+    src: url("fonts/flaticon.eot#iefix") format("embedded-opentype"), url("fonts/flaticon.woff") format("woff"), url("fonts/flaticon.ttf") format("truetype"), url("fonts/flaticon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after,
+.discapacitado:after,
+.discapacitado:before,
+.prohivido:before,
+.prohivido:after {
+    font-family: Flaticon;
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 20px;
+}
+
+.flaticon-disability3:before {
+    content: "\e000";
+}
+
+.flaticon-roadsign14:before {
+    content: "\e001";
+}
+
+.discapacitado:after {
+    content: "\e000";
+    color: blue;
+    display: block;
+    font-size: 5em;
+    position: absolute;
+    margin: 45% auto;
+    transition: .5s;
+}
+
+.discapacitado:hover:after {
+    transform: rotateX(350deg);
+}
+
+.prohivido:after {
+    content: "\e001";
+    display: block;
+    font-size: 5.3em;
+    margin: 40% auto;
+    position: absolute;
+    color: red;
+    z-index: 1;
+    transition: .5s;
+}
+
+.prohivido:hover:after {
+    transform: rotateX(360deg);
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.casilla {
+    background-color: bisque;
+    border: 5px solid #f66;
+    box-shadow: 6px 8px 15px 1px rgba(0, 0, 0, .45);
+    display: inline-block;
+    height: 30%;
+    margin-bottom: .5em;
+    margin-right: 1em;
+    overflow: hidden;
+    position: relative;
+    transition: 2s;
+    width: 15%;
+}
+
+.der,
+.izq {
+    border: 2px solid black;
+    position: absolute;
+    transition: .5s;
+}
+
+.der {
+    height: 70%;
+    top: 20%;
+    right: 15%;
+}
+
+.izq {
+    height: 70%;
+    top: 20%;
+    left: 15%;
+}
+
+.casilla .med,
+.ocupado .med,
+.reservado .med {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.casilla .med label {
+    display: inline-block;
+    width: 100%;
+}
+
+.casilla:hover {
+    background-color: black;
+    box-shadow: none;
+    border: 4px solid gold;
+    color: white;
+    padding: 3em;
+}
+
+.casilla:hover .izq,
+.casilla:hover .der {
+    border: 4px solid green;
+}
+
+#contenedor_pisos{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ocupado .med,
+.reservado .med {
+    background-color: rgba(222, 234, 30, 0.72);
+    color: red;
+    font-size: 20px;
+    margin: -13px -29px 0px 0px;
+    right: -1em;
+    padding: 0px 2.5em 0 2.5em;
+    transform: rotate(66deg);
+    transition: .5s;
+    z-index: 1;
+}
+
+.reservado .med {
+    transform: rotate(-66deg);
+}
+
+.reservado:hover .med {
+    transform: rotate(66deg);
+}
+
+.ocupado:hover .med {
+    transform: rotate(-66deg);
+}
+
+[class^="piso"],
+[class*=" piso"] {
+    height: 600px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+}
+/*-----------------------SCROLL BAR---------------------*/
+
+.piso::-webkit-scrollbar,.tab::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eliminar Registro</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+</head>
+
+<body>
+    <div class="content">
+        <header class="page-header">
+            <h1>Eliminar registros {{"de" + tipo}}</h1>
+        </header>
+
+    </div>
+    <div id="filtros">
+        <div class="form-group col-xs-12">
+            <select name="" id="" class="form-control">
+                <option value="">Por favor seleccione una lista</option>
+                <option value="">Usuarios Registrados</option>
+                <option value="">Clientes con Reserva</option>
+            </select>
+        </div>
+        <div class="form-group col-xs-5">
+            <label for="txtNombre" class="control-label col-xs-5">Nombre del Cliente </label>
+            <div class="col-xs-7">
+                <input type="text" class="form-control" placeholder="Filtrar Por Nombre">
+            </div>
+        </div>
+        <div class="form-group col-xs-5">
+            <label for="txtNombre" class="control-label col-xs-5"> Numero del Documento </label>
+            <div class="col-xs-7">
+                <input type="text" class="form-control" placeholder="Filtrar Por Documento">
+            </div>
+        </div>
+        <div class="form-group col-xs-5">
+            <label for="txtNombre" class="control-label col-xs-5"> Placa asociada </label>
+            <div class="col-xs-7">
+                <input type="text" class="form-control" placeholder="Filtrar Por Placas">
+            </div>
+        </div>
+        <div class="form-group col-xs-5">
+            <label for="txtNombre" class="control-label col-xs-5">Administrador </label>
+            <div class="col-xs-7 btn-group" role="group">
+               <button class="tip btn btn-success" titl="Si es administrador">Si</button>
+               <button class="tip btn btn-warning " titl="No es administrador">No</button>
+               <button class="tip btn btn-primary"
+                       titl="No se tiene encuenta para la busqueda">desabilitar</button>
+                <input type="text" class="form-control admin" placeholder="Filtrar Por Nombre">
+            </div>
+        </div>
+        <div class="form-group col-xs-5">
+            <label for="txtNombre" class="control-label col-xs-5">Telefono </label>
+            <div class="col-xs-7">
+                <input type="text" class="form-control" placeholder="Filtrar Por Nombre">
+            </div>
+        </div>
+        <div class="form-group col-xs-5">
+            <label for="txtNombre" class="control-label col-xs-5">Email</label>
+            <div class="col-xs-7">
+                <input type="text" class="form-control" placeholder="Filtrar Por Nombre">
+            </div>
+        </div>
+    </div>
+
+    <div id="usuarios" class="table-responsive">
+        <table class="table table-bodered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>documento</th>
+                    <th>Usuario</th>
+                    <th>Administrador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>juan</td>
+                    <td>11111</td>
+                    <td>juan</td>
+                    <td>si</td>
+                    <td class="tip" titl="Eliminar">
+                        <div class="eliminar"><span class="glyphicon glyphicon-remove"></span></div>
+                    </td>
+                    <td class="tip" titl="Actualizar">
+                        <div class="actualizar">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="reservados" class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Documento</th>
+                    <th>Puesto</th>
+                    <th>Placa asociada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>carlos</td>
+                    <td>22222</td>
+                    <td>A12</td>
+                    <td>A4T12</td>
+                    <td class="tip" titl="Eliminar">
+                        <div class="eliminar">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </div>
+                    </td>
+                    <td class="tip" titl="Actualizar">
+                        <div class="actualizar">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
