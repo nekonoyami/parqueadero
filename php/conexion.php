@@ -4,7 +4,7 @@
 	function conexionServidor()
 	{
 		# code...
-		$link = mysqli_connect("localhost", "root", "", "db_proyecto");
+		$link = mysqli_connect("localhost", "root", "", "db_parqueadero");
 		if ($link -> connect_errno) {
 			# code...
 			die ("fallo la conexion: (" . $link -> mysqli_connect_errno() . ") " .  $link -> mysqli_connect_errno());
@@ -34,9 +34,9 @@
     function darRespuesta($sql, $link)
     {
         $result = consultas($sql, $link);
-        $datos =array();
+        $datos = array();
         $i = 0;	
-        if($result ->num_rows>0)
+        if($result -> num_rows >0)
         {
             while ($rows = $result -> fetch_array(MYSQLI_ASSOC)) {
                 # code...
@@ -46,7 +46,7 @@
             return json_encode($datos);
         }
         else{
-            return 0;
+            return $sql;
         }
     }
 	
